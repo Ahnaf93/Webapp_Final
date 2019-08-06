@@ -2,19 +2,20 @@ var mongoose = require("mongoose");
 
 var Schema = mongoose.Schema;
 
-var articleSchema = new Schema({
+var postSchema = new Schema({
   title: {
     type: String,
     required: "Title required"
   },
   priority: {
     type: Number,
-    required: "Title required"
+    required: "Number required"
   },
-  content: {
-    type: String
+  notes :{
+    type: String,
+    required: "Notes required"
   }
 });
 
-var Article = mongoose.model('Article', articleSchema)
-module.exports = Article;
+var Post = mongoose.model('Posts', postSchema)
+module.exports = Post;
