@@ -1,4 +1,3 @@
-
 var http = require('http');
 var express = require('express');
 var app = express();
@@ -6,12 +5,8 @@ var server= http.Server(app);
 var bodyParser=require ('body-parser');
 var mongo = require('mongodb');
 
-
-
-var db_url = "mongodb+srv://Ahnaf93:TAhmid93@cluster0-kb1r0.mongodb.net/test?retryWrites=true&w=majority"
-
-
-
+var db_url= "mongodb+srv://Ahnaf93:TAhmid93@cluster0-kb1r0.mongodb.net/test?retryWrites=true&w=majority"
+var db;
 var mongoose = require("mongoose");
 
 mongoose.connect(db_url, { useNewUrlParser: true });

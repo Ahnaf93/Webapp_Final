@@ -10,16 +10,16 @@ module.exports.create = function(request, response) {
     if (err)
       return response.status(400)
         .json({
-          error: "Please add a title",
-          error: "Please add a Number",
-          error: "please add a notes"
+          error: "Please add  task",
+          error: "Please add priority",
+          error: "Please add notes"
         });
         
     console.log(data);
     return response.status(200)
     
       .json({
-        message: "Post successfully created"
+        message: "Post send successfully"
       });
      
 

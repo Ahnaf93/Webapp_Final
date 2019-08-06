@@ -9,7 +9,7 @@ var postSchema = new Schema({
   },
   priority: {
     type: Number,
-    required: "Number required"
+    required: "Priority required"
   },
   notes :{
     type: String,

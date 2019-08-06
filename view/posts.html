@@ -7,28 +7,26 @@
 </head>
 
 <body>
-        <h1 id="header">Example heading <span class="badge badge-secondary">New Post</span></h1>
+        <h1 id="header"> heading <span class="badge badge-secondary">New Post</span></h1>
     <form id ="Form">
         
-        <div class="form-group">
-            <label for="title">Task</label>
-            <input type="Title" class="form-control" id="title" placeholder="Enter Title">
-          </div>
-          
-       
-          <div class="form-group">
-            <label for="reading_length">Priority</label>
-            <input type="number" class="form-control" id="priority" placeholder="Enter time required">
-          </div>
-        
-        
-          <div class="form-group">
-            <label for="text">Notes</label>
-            <textarea class="form-control" id="text" rows="5"
-            placeholder="Enter Your Notes here"></textarea>
-          </div>
-     
-        </form>
+      <div class="form-group">
+        <label for="task">Task</label>
+        <input type="Task" class="form-control" id="task" placeholder="Enter Task">
+      </div>
+      <div class="form-group">
+          <label for="priority">Priority</label>
+          <input type="number" class="form-control" id="priority" coloumn="2" placeholder="Enter Priority">
+        </div>
+      
+      
+      <div class="form-group">
+        <label for="notes">Notes</label>
+        <textarea class="form-control" id="notes" placeholder="Enter notes"></textarea>
+      </div>
+    
+    
+    </form>
       <script
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -36,9 +34,9 @@
        <script>
       
       $( document ).ready(function(){
-        $( "#title" ).prop( "disabled", true );
-        $( "#text" ).prop( "disabled", true );
-        $( "#reading_length" ).prop( "disabled", true );
+        $( "#task" ).prop( "disabled", true );
+        $( "#priority" ).prop( "disabled", true );
+        $( "#notes" ).prop( "disabled", true );
         $.ajax({
           method:"GET",
           url:"/post/list"
